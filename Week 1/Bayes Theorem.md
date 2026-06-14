@@ -1,25 +1,17 @@
-# Bayes' Theorem 
+# Bayes' Theorem
 
 Bayes' Theorem helps us update our belief about something after observing new evidence.
 
 ## Bayes' Theorem Formula
 
-\[
-P(H|D)=\frac{P(D|H)\cdot P(H)}{P(D)}
-\]
+$$
+P(H \mid D)=\frac{P(D \mid H)\cdot P(H)}{P(D)}
+$$
 
 Where:
 
-- **H** = Hypothesis (what we want to know)
-- **D** = Data (what we observed)
-
-Read as:
-
-> Probability of the hypothesis after seeing the data  
-> =  
-> Probability of the data given the hypothesis × Prior belief  
-> ÷  
-> Probability of the data
+* **H** = Hypothesis (what we want to know)
+* **D** = Data (what we observed)
 
 ---
 
@@ -29,29 +21,17 @@ Read as:
 
 ### Formula
 
-\[
+$$
 P(H)
-\]
-
-### Meaning
-
-The probability of the hypothesis **before** seeing any data.
+$$
 
 ### Example
 
 Suppose only 1% of people have a disease.
 
-\[
-P(Disease)=0.01
-\]
-
-This is the prior probability.
-
-### Intuition
-
-Ask yourself:
-
-> "Before seeing any evidence, how likely is this?"
+$$
+P(\text{Disease})=0.01
+$$
 
 ---
 
@@ -59,29 +39,17 @@ Ask yourself:
 
 ### Formula
 
-\[
-P(Data|H)
-\]
-
-### Meaning
-
-The probability of observing the data if the hypothesis is true.
+$$
+P(\text{Data} \mid H)
+$$
 
 ### Example
 
 If a person has the disease, the test correctly returns positive 99% of the time.
 
-\[
-P(Positive|Disease)=0.99
-\]
-
-This is the likelihood.
-
-### Intuition
-
-Ask yourself:
-
-> "If my hypothesis is true, how likely am I to observe this data?"
+$$
+P(\text{Positive} \mid \text{Disease})=0.99
+$$
 
 ---
 
@@ -89,30 +57,15 @@ Ask yourself:
 
 ### Formula
 
-\[
-P(Data)
-\]
-
-### Meaning
-
-The overall probability of observing the data.
+$$
+P(\text{Data})
+$$
 
 ### Example
 
-\[
-P(Positive)
-\]
-
-This includes both:
-
-- True positives
-- False positives
-
-### Intuition
-
-Ask yourself:
-
-> "How common is this observation in the entire population?"
+$$
+P(\text{Positive})
+$$
 
 ---
 
@@ -120,51 +73,15 @@ Ask yourself:
 
 ### Formula
 
-\[
-P(H|Data)
-\]
-
-### Meaning
-
-The probability of the hypothesis after observing the data.
+$$
+P(H \mid \text{Data})
+$$
 
 ### Example
 
-\[
-P(Disease|Positive)
-\]
-
-Probability that a person has the disease after receiving a positive test result.
-
-### Intuition
-
-Ask yourself:
-
-> "Now that I've seen the evidence, what should I believe?"
-
----
-
-# Bayes Workflow
-
-```text
-Prior Belief
-      ↓
-Observe Data
-      ↓
-Apply Bayes' Theorem
-      ↓
-Posterior Belief
-```
-
-Or simply:
-
-```text
-Old Belief
-     +
-New Evidence
-     =
-Updated Belief
-```
+$$
+P(\text{Disease} \mid \text{Positive})
+$$
 
 ---
 
@@ -172,160 +89,77 @@ Updated Belief
 
 Suppose:
 
-- 1% of the population has a disease
-
-\[
+$$
 P(D)=0.01
-\]
+$$
 
-- The test correctly identifies the disease 99% of the time
+$$
+P(\text{Pos} \mid D)=0.99
+$$
 
-\[
-P(Pos|D)=0.99
-\]
-
-- The false positive rate is 5%
-
-\[
-P(Pos|\bar D)=0.05
-\]
-
----
+$$
+P(\text{Pos} \mid \bar{D})=0.05
+$$
 
 ## Step 1: Calculate Evidence
 
 Using the Law of Total Probability:
 
-\[
-P(Pos)=P(Pos|D)P(D)+P(Pos|\bar D)P(\bar D)
-\]
+$$
+P(\text{Pos})
+=============
+
+P(\text{Pos}\mid D)P(D)
++
+P(\text{Pos}\mid \bar{D})P(\bar{D})
+$$
 
 Substituting values:
 
-\[
+$$
 =0.99(0.01)+0.05(0.99)
-\]
+$$
 
-\[
+$$
 =0.0099+0.0495
-\]
+$$
 
-\[
+$$
 =0.0594
-\]
-
----
+$$
 
 ## Step 2: Calculate Posterior
 
 Applying Bayes' Theorem:
 
-\[
-P(D|Pos)=\frac{0.99\times0.01}{0.0594}
-\]
+$$
+P(D\mid \text{Pos})
+===================
 
-\[
+\frac{0.99\times0.01}{0.0594}
+$$
+
+$$
 \approx0.1667
-\]
-
----
+$$
 
 ## Result
 
-\[
-P(D|Pos)\approx16.7\%
-\]
-
-Even after testing positive, the probability that the person actually has the disease is only about **16.7%**.
-
-### Why?
-
-Because:
-
-- The disease is very rare.
-- False positives occur much more frequently than true positives.
-
-This is one of the most famous examples demonstrating the importance of Bayes' Theorem.
-
----
-
-# Detective Analogy
-
-Imagine you're a detective.
-
-## Prior
-
-Before seeing any clues:
-
-> "I think there's a 10% chance this suspect is guilty."
-
----
-
-## Likelihood
-
-You find a fingerprint.
-
-Ask:
-
-> "If the suspect were guilty, how likely would it be to find this fingerprint?"
-
----
-
-## Evidence
-
-Ask:
-
-> "How common are fingerprints like this in general?"
-
----
-
-## Posterior
-
-After examining the fingerprint:
-
-> "What is the probability that the suspect is guilty now?"
-
----
-
-# Bayes in Machine Learning
-
-Bayesian Machine Learning follows the same idea:
-
-1. Start with a prior belief about model parameters.
-2. Observe training data.
-3. Update beliefs using Bayes' Theorem.
-4. Obtain a posterior distribution.
-
-```text
-Prior
-  +
-Data
-  ↓
-Posterior
-```
-
-When more data arrives:
-
-```text
-Posterior (old)
-      ↓
-Becomes
-      ↓
-Prior (new)
-```
-
-and the process repeats.
+$$
+P(D\mid \text{Pos})
+\approx16.7%
+$$
 
 ---
 
 # Summary Table
 
-| Term | Formula | Meaning |
-|--------|---------|---------|
-| Prior | P(H) | Belief before seeing data |
-| Likelihood | P(D\|H) | Probability of data if hypothesis is true |
-| Evidence | P(D) | Overall probability of observing the data |
-| Posterior | P(H\|D) | Updated belief after seeing data |
+| Term       | Formula       | Meaning                                   |
+| ---------- | ------------- | ----------------------------------------- |
+| Prior      | $P(H)$        | Belief before seeing data                 |
+| Likelihood | $P(D \mid H)$ | Probability of data if hypothesis is true |
+| Evidence   | $P(D)$        | Overall probability of observing the data |
+| Posterior  | $P(H \mid D)$ | Updated belief after seeing data          |
 
 ---
 
