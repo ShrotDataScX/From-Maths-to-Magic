@@ -5,10 +5,12 @@
 
 # 2. Probability Distributions
 [ 3Blue1brown Central Limit Theorem](https://www.youtube.com/watch?v=zeJD6dqJ5lo)
+
 [ 3Blue1Brown Gaussian Integral](https://www.youtube.com/watch?v=cy8r7WSuT1I)
 
 # 3. Maximum Likelihood and Entropy
 [Entropy Core intuition](https://www.youtube.com/watch?v=YtebGVx-Fxw)
+
 [Maximum Likelihood](https://www.youtube.com/watch?v=VOIhswqFWVc)
 
 # 4. KL Divergence
