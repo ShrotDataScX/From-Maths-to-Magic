@@ -201,6 +201,62 @@ $$ Cov(X,Y) = E[(X-E[X])(Y-E[Y])] $$
 
 ### 9. Matrices
 
+### 9.1 GitHub-Safe Matrix and Function Commands
+
+GitHub's Markdown math renderer does not support all LaTeX macros.
+
+Avoid unsupported commands such as:
+
+```latex
+\operatorname
+```
+
+Example (DO NOT USE):
+
+```md
+$$ \Sigma = \operatorname{diag}(\sigma^2) $$
+```
+
+Instead use one of the following GitHub-safe alternatives:
+
+```md
+$$ \Sigma = \mathrm{diag}(\sigma^2) $$
+```
+
+or preferably:
+
+```md
+$$ \Sigma = diag(\sigma^2) $$
+```
+
+Similarly, prefer plain text function names or `\mathrm{}` for common operators:
+
+CORRECT:
+
+```md
+$$ \Sigma = diag(\sigma^2) $$
+```
+
+```md
+$$ \Sigma = \mathrm{diag}(\sigma^2) $$
+```
+
+```md
+$$ \arg\max_{\theta} p(x) $$
+```
+
+INCORRECT:
+
+```md
+$$ \Sigma = \operatorname{diag}(\sigma^2) $$
+```
+
+When generating GitHub README files:
+
+- Do not use `\operatorname{}`.
+- Prefer plain-text function names such as `diag`, `softmax`, `ReLU`, `KL`.
+- If styling is needed, use `\mathrm{}`.
+- Prioritize compatibility with GitHub's native math renderer over full LaTeX compatibility.
 Matrices may contain LaTeX row separators (`\\`) but the entire matrix must remain on a SINGLE Markdown line.
 
 CORRECT:
