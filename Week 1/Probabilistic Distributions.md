@@ -174,10 +174,7 @@ compute
 
 $$
 Z=
-\frac{110-100}{5}
-=================
-
-2
+\frac{110-100}{5}=2
 $$
 
 Then
@@ -197,8 +194,7 @@ A remarkable property of normal distributions is:
 ### One Standard Deviation
 
 $$
-P(|X-\mu|<\sigma)
-\approx 0.68
+P(|X-\mu|<\sigma)\approx 0.68
 $$
 
 Approximately 68% of observations lie within one standard deviation of the mean.
@@ -208,8 +204,7 @@ Approximately 68% of observations lie within one standard deviation of the mean.
 ### Two Standard Deviations
 
 $$
-P(|X-\mu|<2\sigma)
-\approx 0.95
+P(|X-\mu|<2\sigma)\approx 0.95
 $$
 
 Approximately 95% lie within two standard deviations.
@@ -219,8 +214,7 @@ Approximately 95% lie within two standard deviations.
 ### Three Standard Deviations
 
 $$
-P(|X-\mu|<3\sigma)
-\approx 0.997
+P(|X-\mu|<3\sigma)\approx 0.997
 $$
 
 Approximately 99.7% lie within three standard deviations.
@@ -246,13 +240,7 @@ $$
 are independent, then
 
 $$
-aX+bY
-\sim
-N
-\left(
-a\mu_X+b\mu_Y,
-a^2\sigma_X^2+b^2\sigma_Y^2
-\right)
+aX+bY\simN\left(a\mu_X+b\mu_Y,a^2\sigma_X^2+b^2\sigma_Y^2\right)
 $$
 
 ---
@@ -344,12 +332,7 @@ The parameter `p` is the probability of success.
 The PMF can be written compactly as
 
 $$
-P(X=x)
-======
-
-p^x(1-p)^{1-x}
-\quad
-x\in{0,1}
+P(X=x)=p^x(1-p)^{1-x}\quadx\in{0,1}
 $$
 
 ---
@@ -359,12 +342,7 @@ $$
 Using the definition of expectation,
 
 $$
-E[X]
-====
-
-1\cdot p
-+
-0\cdot(1-p)
+E[X]=1\cdot p+0\cdot(1-p)
 $$
 
 Therefore
@@ -418,30 +396,21 @@ $$
 Using
 
 $$
-Var(X)
-======
-
+Var(X)=
 ## E[X^2]
-
 (E[X])^2
 $$
 
 gives
 
 $$
-Var(X)
-======
-
-p-p^2
+Var(X)=p-p^2
 $$
 
 or
 
 $$
-Var(X)
-======
-
-p(1-p)
+Var(X)=p(1-p)
 $$
 
 ---
@@ -612,13 +581,7 @@ When we have multiple variables, we organize all variances and covariances into 
 Suppose
 
 $$
-X=
-\begin{bmatrix}
-X_1\
-X_2\
-\vdots\
-X_n
-\end{bmatrix}
+X=\begin{bmatrix}X_1\X_2\\vdots\X_n\end{bmatrix}
 $$
 
 Then the covariance matrix is
