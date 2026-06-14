@@ -106,9 +106,7 @@ $$
 Using the Law of Total Probability:
 
 $$
-P(\text{Pos})
-=============
-
+P(\text{Pos}) =
 P(\text{Pos}\mid D)P(D)
 +
 P(\text{Pos}\mid \bar{D})P(\bar{D})
@@ -134,7 +132,7 @@ Applying Bayes' Theorem:
 
 $$
 P(D\mid \text{Pos})
-===================
+=
 
 \frac{0.99\times0.01}{0.0594}
 $$
