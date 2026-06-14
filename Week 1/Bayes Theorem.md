@@ -133,7 +133,6 @@ Applying Bayes' Theorem:
 $$
 P(D\mid \text{Pos})
 =
-
 \frac{0.99\times0.01}{0.0594}
 $$
 
