@@ -199,7 +199,7 @@ This is expensive and difficult to train.
 
 Therefore most VAEs assume:
 
-$$ \Sigma = \operatorname{diag}(\sigma^2) $$
+$$ \Sigma = \mathrm{diag}(\sigma^2) $$
 
 which means:
 
@@ -307,7 +307,7 @@ The goal of training is to learn a decoder that can generate realistic data from
 
 Given an image x, the encoder predicts a latent distribution:
 
-$$ q_\phi(z|x) = N(\mu,\operatorname{diag}(\sigma^2)) $$
+$$ q_\phi(z|x) = N(\mu,\mathrm{diag}(\sigma^2)) $$
 
 This means:
 
