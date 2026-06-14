@@ -131,9 +131,7 @@ $$
 Applying Bayes' Theorem:
 
 $$
-P(D\mid \text{Pos})
-=
-\frac{0.99\times0.01}{0.0594}
+P(D\mid Pos)=\frac{0.99\times0.01}{0.0594}
 $$
 
 $$
@@ -143,8 +141,7 @@ $$
 ## Result
 
 $$
-P(D\mid \text{Pos})
-\approx16.7%
+P(D\mid Pos)\approx 16.7\%
 $$
 
 ---
