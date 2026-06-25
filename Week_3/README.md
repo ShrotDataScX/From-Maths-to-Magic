@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Week 3 --- Variational Autoencoder (VAE): Your First Generative Model
 
 > **From Maths to Magic** --- Week 3 Milestone
@@ -184,3 +185,6 @@ Week_3/
     Bayes*.
 -   PyTorch Documentation
 -   Scikit-Learn Documentation
+=======
+
+>>>>>>> e54e3094828164dd80391344a750d39a5f34169d
